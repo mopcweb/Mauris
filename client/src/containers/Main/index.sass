@@ -1,0 +1,116 @@
+/* ------------------------------------------------------------------- */
+/*                              Variables
+/* ------------------------------------------------------------------- */
+
+@import '../../variables.sass'
+
+/* ------------------------------------------------------------------- */
+/*                              Main
+/* ------------------------------------------------------------------- */
+
+.Main
+  padding-bottom: 10px
+
+.Promo
+  padding: 37.5px
+  width: 100%
+
+  img
+    margin: 0 auto
+    display: block
+    min-width: 143px
+    width: 36%
+    max-width: 300px
+    min-height: 112px
+    // height: 16%
+
+  h3
+    margin: 0 auto
+    margin-top: 26px
+    width: 70%
+    font-size: 12px
+    font-weight: normal
+
+    @media screen and (min-width: 768px)
+      font-size: 16px
+
+
+.Calendar
+  width: 100%
+
+  &-Months
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 50px
+    font-weight: bold
+    text-align: center
+    background-color: $nav
+
+  &-Btn
+    width: 60px
+    height: 100%
+    background-image: url('./next.png')
+    background-size: 15px 20px
+    background-position: center
+    background-repeat: no-repeat
+    opacity: 0.7
+    cursor: pointer
+
+    &_prev
+      transform: rotate(180deg)
+
+    &:hover
+      opacity: 1
+
+  &-Month
+    width: 100%
+    table-layout: fixed
+
+    @media screen and (min-width: 768px)
+      min-height: 420px
+
+  &-Weeks
+
+  &-Day
+    width: calc((100% - 14px) / 7)
+    border: 0.5px solid $border
+    cursor: pointer
+
+    a
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100%
+      height: 100%
+      color: $border
+
+    @media screen and (min-width: 768px)
+      height: 70px !important
+
+    &_active
+      a
+        color: $dark
+
+      @media screen and (min-width: 768px)
+        &:hover
+          border-color: #e10246
+          font-weight: bold
+
+      &:focus
+        border-color: #e10246
+        font-weight: bold
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------- */
+/*                              End
+/* ------------------------------------------------------------------- */
